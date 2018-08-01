@@ -39,9 +39,9 @@ public class EmailSendingServlet extends HttpServlet {
          //host = context.getInitParameter("host");
         port = "25";
         // port = context.getInitParameter("port");
-        user = "daja.proyectosena@gmail.com";
+        user = "siofccwe@gmail.com";
         //user = context.getInitParameter("user");
-        pass = "daja2014";
+        pass = "12345siof;
         //pass = context.getInitParameter("pass");
     }
 
