@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="compras" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9260ebb-79d7-4798-870f-d621e9a818d7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="codigo" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     compra.`codigo` AS compra_codigo,
+     compra.`usuario_cedula` AS compra_usuario_cedula,
+     compra.`fecha` AS compra_fecha,
+     compra.`valortotalbruto` AS compra_valortotalbruto,
+     compra.`pago` AS compra_pago,
+     tempcompra.`codigo` AS tempcompra_codigo,
+     tempcompra.`codigo_compra` AS tempcompra_codigo_compra,
+     tempcompra.`producto_codigo` AS tempcompra_producto_codigo,
+     tempcompra.`producto_nombre` AS tempcompra_producto_nombre,
+     tempcompra.`precio` AS tempcompra_precio,
+     tempcompra.`cantidad` AS tempcompra_cantidad,
+     tempcompra.`usuario_cedula` AS tempcompra_usuario_cedula,
+     tempcompra.`fecha` AS tempcompra_fecha
+FROM
+     `compra` compra INNER JOIN `tempcompra` tempcompra ON compra.`codigo` = tempcompra.`codigo_compra`
+where tempcompra.`codigo_compra`=$P{codigo}]]>
+	</queryString>
+	<field name="compra_codigo" class="java.lang.Integer"/>
+	<field name="compra_usuario_cedula" class="java.lang.Integer"/>
+	<field name="compra_fecha" class="java.lang.String"/>
+	<field name="compra_valortotalbruto" class="java.lang.Integer"/>
+	<field name="compra_pago" class="java.lang.String"/>
+	<field name="tempcompra_codigo" class="java.lang.Integer"/>
+	<field name="tempcompra_codigo_compra" class="java.lang.Integer"/>
+	<field name="tempcompra_producto_codigo" class="java.lang.Integer"/>
+	<field name="tempcompra_producto_nombre" class="java.lang.String"/>
+	<field name="tempcompra_precio" class="java.lang.Integer"/>
+	<field name="tempcompra_cantidad" class="java.lang.Integer"/>
+	<field name="tempcompra_usuario_cedula" class="java.lang.Integer"/>
+	<field name="tempcompra_fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<image>
+				<reportElement uuid="b860aa53-b335-466c-993f-8ff1fd0c23a9" x="725" y="0" width="77" height="102"/>
+				<imageExpression><![CDATA["cherry.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement uuid="21c94dbc-6dcb-47d6-a66e-bbc218c6899e" mode="Opaque" x="0" y="0" width="721" height="66" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="1da283de-1740-43fd-b8f1-f98de69d64c1" style="Title" x="0" y="0" width="370" height="66"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry Title]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="3ceb8411-e854-45af-9401-757e0d367a71" style="SubTitle" x="370" y="37" width="316" height="29"/>
+					<textElement textAlignment="Right">
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry SubTitle]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="37dfc03d-3d01-4b0d-a1d3-cdd24dc3c01a" mode="Opaque" x="0" y="70" width="721" height="32" forecolor="#000000" backcolor="#CC0000"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="cae46208-96b8-48a9-9439-ec97e4f749be" x="553" y="12" width="144" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e88fad0f-4015-477a-8f07-427b25f1da2d" style="Column header" x="0" y="0" width="398" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tempcompra_codigo_compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e77be0fd-2350-4066-ab23-1fa7451bddf6" style="Column header" x="398" y="0" width="398" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[compra_codigo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="b841aa1a-f611-4b5c-8d85-2248610bd48d" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="3324f1cf-7f89-4aa5-a345-4c2d7e8df3be" style="Detail" positionType="Float" x="0" y="0" width="398" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tempcompra_codigo_compra}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="92d80c8e-67c8-4074-9ed1-14a3d655ff20" style="Detail" positionType="Float" x="398" y="0" width="398" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{compra_codigo}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="650ec79c-4320-4d18-b2bb-7fb8b6f231a6" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="c1918500-3cc6-4f4c-b080-abd9e1c6fd99" mode="Opaque" x="0" y="0" width="802" height="25" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="ffc74e38-3904-4e12-92c9-f5a3af149db4" style="Column header" x="757" y="3" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="cbd02801-e121-403b-9043-909956f04401" style="Column header" x="677" y="3" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="780f3ced-70ec-43dd-b9b7-7a97311475c9" style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

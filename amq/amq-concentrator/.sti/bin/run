@@ -1,6 +1,0 @@
-#!/bin/sh
-
-echo Adding \"concentrator\" user to users file
-echo $CONCENTRATOR_USERNAME=$CONCENTRATOR_PASSWORD >> /opt/amq/conf/openshift-users.properties
-
-exec $AMQ_HOME/bin/launch.sh

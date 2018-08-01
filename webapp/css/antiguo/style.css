@@ -1,0 +1,120 @@
+  #menu {
+	position: absolute;
+	width: 210px;
+	height: 83px;
+	z-index: 100;
+	right: 264px;
+	top: 290px;
+}
+
+ #logo {
+	position: absolute;
+	left: 20%;
+	top: 28px;
+	width: 60%;
+	height: 177px;
+	z-index: 1;
+	background-color: rgba(51,255,51,0.6);
+	color: rgba(51,255,0,0.6);
+	border-radius: 15px;
+	background-image: url(Imagenes/letra.png);
+}
+#contenido {
+	position: absolute;
+	left: 401px;
+	top: 336px;
+	width: 20%;
+	height: 210px;
+	z-index: 100;
+	background: #3A332C;
+	background-color: rgba(31,63,124,0.8);
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: rgba(0,0,0,1);
+	border-radius: 15px;
+}
+
+div.menu5
+{
+    /*width:50px;margin:0 auto;*//*Uncomment this line to make the menu center-aligned.*/
+    text-align:center;
+	
+    background:#332E28;
+    border:1px solid black;
+    font-size:0;
+    padding:1px;
+	width:100%;
+
+}
+
+div.menu5 a
+{
+	display: inline-block;
+	padding: 0 20px;
+	background: #3A332C;
+	border: 1px solid #5E544A;
+	color: #C4B09C;
+	text-decoration: none;
+	font: bold 16px Arial;
+	line-height: 27px;
+	margin-right: 1px;
+	top: 45px;
+	
+}
+        #imagen {
+	position: absolute;
+	left: 52%;
+	top: 340px;
+	width: 159px;
+	height: 162px;
+	z-index: 100;
+	text-align: center;
+	padding: 17px;
+	border-style: 10;
+}
+        #font {
+	position: absolute;
+	left: 20%;
+	top: 208px;
+	width: 60%;
+	height: 400px;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 15px;
+}
+        
+        
+
+div.menu5 a:hover, div.menu5 a.current
+{
+	background: #484037;
+	color: #E6D4C3;
+	font: bold 18px Arial;
+	text-align: center;
+}
+ #form {
+	position: absolute;
+	left: 40%;
+	top: 155px;
+	z-index: 1;
+	background-color: #66CCCC;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,1);
+	border-style: 10;
+	padding: 20px;
+}
+#form form table tr td {
+	text-align: left;
+}
+#form form table {
+	text-align: left;
+}
+//menu
+
+
+
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 12px/150% Times New Roman, Times, serif; background: #fff; overflow: hidden; border: 4px solid #36752D; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #36752D), color-stop(1, #275420) );background:-moz-linear-gradient( center top, #36752D 5%, #275420 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#36752D', endColorstr='#275420');background-color:#36752D; color:#F2F2F2; font-size: 12px; font-weight: bold; border-left: 4px solid #36752D; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #275420; border-left: 1px solid #C6FFC2;font-size: 12px;font-weight: normal; }.datagrid table tbody .alt td { background: #DFFFDE; color: #275420; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #36752D;background: #DFFFDE;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #36752D;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #36752D), color-stop(1, #275420) );background:-moz-linear-gradient( center top, #36752D 5%, #275420 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#36752D', endColorstr='#275420');background-color:#36752D; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #275420; color: #FFFFFF; background: none; background-color:#36752D;}

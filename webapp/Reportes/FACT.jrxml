@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FACT" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90fd285c-7402-48d6-9632-de6ec9c7003e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="codigo" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     compra.`codigo` AS compra_codigo,
+     compra.`usuario_cedula` AS compra_usuario_cedula,
+     compra.`fecha` AS compra_fecha,
+     compra.`valortotalbruto` AS compra_valortotalbruto,
+     compra.`pago` AS compra_pago,
+     tempcompra.`codigo` AS tempcompra_codigo,
+     tempcompra.`codigo_compra` AS tempcompra_codigo_compra,
+     tempcompra.`producto_codigo` AS tempcompra_producto_codigo,
+     tempcompra.`producto_nombre` AS tempcompra_producto_nombre,
+     tempcompra.`precio` AS tempcompra_precio,
+     tempcompra.`cantidad` AS tempcompra_cantidad,
+     tempcompra.`usuario_cedula` AS tempcompra_usuario_cedula,
+     tempcompra.`fecha` AS tempcompra_fecha
+FROM
+     `tempcompra` tempcompra INNER JOIN `compra` compra ON tempcompra.`codigo_compra` = compra.`codigo`
+WHERE compra.`codigo`=$P{codigo}]]>
+	</queryString>
+	<field name="compra_codigo" class="java.lang.Integer"/>
+	<field name="compra_usuario_cedula" class="java.lang.Integer"/>
+	<field name="compra_fecha" class="java.lang.String"/>
+	<field name="compra_valortotalbruto" class="java.lang.Integer"/>
+	<field name="compra_pago" class="java.lang.String"/>
+	<field name="tempcompra_codigo" class="java.lang.Integer"/>
+	<field name="tempcompra_codigo_compra" class="java.lang.Integer"/>
+	<field name="tempcompra_producto_codigo" class="java.lang.Integer"/>
+	<field name="tempcompra_producto_nombre" class="java.lang.String"/>
+	<field name="tempcompra_precio" class="java.lang.Integer"/>
+	<field name="tempcompra_cantidad" class="java.lang.Integer"/>
+	<field name="tempcompra_usuario_cedula" class="java.lang.Integer"/>
+	<field name="tempcompra_fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement uuid="0e0d894d-b451-42f8-a74b-3970124523b0" x="0" y="0" width="164" height="126"/>
+				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="d68925e2-93b4-457c-947f-54a7856011f3" style="Title" x="270" y="0" width="263" height="62"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a7bb2e1-d8f9-4bff-8c1a-6e60d55ad75b" style="SubTitle" x="303" y="62" width="196" height="22"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee SubTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4063435-8746-4485-8dac-c9e57b4ba757" x="172" y="94" width="383" height="42"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="b1cd09ca-00a5-4551-b19c-417651b9e03f" x="633" y="-73" width="219" height="209"/>
+				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="cadf6389-deaa-46a2-9e54-80d042cb0a2a" positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="485d2510-98f1-42e0-b783-a4170472af8c" style="Column header" x="0" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[compra_codigo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement uuid="bce140ef-9276-4e39-a4ed-bc8794233712" style="Row" mode="Opaque" x="0" y="0" width="802" height="15"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="abf9f07f-f74d-4d05-92e4-425da26568a1" style="Detail" x="0" y="0" width="61" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{compra_codigo}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement uuid="549da118-9331-4ad8-bbbf-4ac66fdc19f7" positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="2ba1f7c9-77d5-446d-b220-61fbd78d067d" mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="ff037bcb-1508-4e94-8e1c-0af028d26b41" style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="25b7ce7c-0e82-40c8-b925-c8ff2bdab2f1" style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="429911d9-9690-4fcf-94ad-9300b8a8c10a" style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,55 @@
+input[type=email] {padding:4px; border:2px solid #ccc; 
+                  -webkit-border-radius: 5px;
+                 
+}            
+           
+input[type=text] {padding:4px; border:2px solid #ccc; 
+                  -webkit-border-radius: 5px;
+                 
+}
+input[type=text]:focus {border-color:#333; }
+
+input[type=password] {padding:4px; border:2px solid #ccc; 
+                      -webkit-border-radius: 5px;
+                      border-radius: 5px;
+}
+input[type=password]:focus {border-color:#333; }
+
+
+input[type=email] {padding:4px; border:2px solid #ccc; 
+                  -webkit-border-radius: 5px;
+                 
+}
+input[type=email]:focus {border-color:#333; }
+
+select
+{padding:3px; border:2px solid #ccc; 
+ -webkit-border-radius: 5px;
+ border-radius: 5px;
+}
+select
+:focus {border-color:#333; }
+input[type=submit] {padding:5px 13px; background:#00ffff;
+                    cursor:pointer;
+                    -webkit-border-radius: 5px;
+                    border-radius: 5px; }
+input[type=submit]:hover {background:#ccff00; }
+
+a:link {text-decoration:none; color: #000099;} /* Link no visitado*/
+a:visited {text-decoration:none; color:#000099;} /*Link visitado*/
+a:active {text-decoration:none;} /*Link activo*/
+a:hover {text-decoration:underline;} /*Mause sobre el link*/
+
+
+
+.enfoco{
+   background-color: springgreen;
+   border:1px solid green;
+   
+}
+input.error{
+    
+   background-color: turquoise;
+   border:1px solid red;
+    
+}

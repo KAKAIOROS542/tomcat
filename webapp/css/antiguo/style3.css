@@ -1,0 +1,91 @@
+  #menu {
+	position: absolute;
+	left: 20%;
+	top: 218px;
+	width: 60%;
+	height: 35px;
+	z-index: 100;
+}
+
+ #logo {
+	position: absolute;
+	left: 20%;
+	top: 28px;
+	width: 250px;
+	height: 177px;
+	z-index: 100;
+}
+#contenido {
+	
+	position: absolute;
+	left: 30%;
+	top: 279px;
+	width: 20%;
+	height: 210px;
+	z-index: 100;
+	background: #3A332C;
+	background-color: rgba(0,99,81,0.3);
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: rgba(0,0,0,1);
+	border-radius: 15px;
+}
+
+div.menu5
+{
+    /*width:50px;margin:0 auto;*//*Uncomment this line to make the menu center-aligned.*/
+    text-align:center;
+	
+    background:#332E28;
+    border:1px solid black;
+    font-size:0;
+    padding:1px;
+	
+
+}
+
+div.menu5 a
+{
+	display: inline-block;
+	padding: 0 20px;
+	background: #3A332C;
+	border: 1px solid #5E544A;
+	color: #C4B09C;
+	text-decoration: none;
+	font: bold 16px Arial;
+	line-height: 27px;
+	margin-right: 1px;
+	top: 45px;
+	
+}
+        #imagen {
+	position: absolute;
+	left: 52%;
+	top: 279px;
+	width: 20%;
+	height: 210px;
+	z-index: 100;
+	background-color: rgba(255,255,255,1);
+}
+        #font {
+	position: absolute;
+	left: 18%;
+	top: 9px;
+	width: 66%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(153,204,255,0.3);
+}
+       .LETRA {
+	color: rgba(255,255,255,1);
+}
+       
+        
+        
+
+div.menu5 a:hover, div.menu5 a.current
+{
+    background:#484037;
+    color:#E6D4C3;
+	font: bold 18px Arial;
+}

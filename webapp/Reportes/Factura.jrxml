@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1598498a-baf9-4c0c-ad48-bd3582deeca2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="6fb92602-9d42-4cab-9c23-0cb9c5ae76aa"/>
+	<parameter name="codigo" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     compra.`codigo` AS compra_codigo,
+     compra.`usuario_cedula` AS compra_usuario_cedula,
+     compra.`fecha` AS compra_fecha,
+     compra.`valortotalbruto` AS compra_valortotalbruto,
+     compra.`pago` AS compra_pago,
+     tempcompra.`codigo` AS tempcompra_codigo,
+     tempcompra.`codigo_compra` AS tempcompra_codigo_compra,
+     tempcompra.`producto_codigo` AS tempcompra_producto_codigo,
+     tempcompra.`producto_nombre` AS tempcompra_producto_nombre,
+     tempcompra.`precio` AS tempcompra_precio,
+     tempcompra.`cantidad` AS tempcompra_cantidad,
+     tempcompra.`usuario_cedula` AS tempcompra_usuario_cedula,
+     tempcompra.`fecha` AS tempcompra_fecha
+FROM
+     `tempcompra` tempcompra INNER JOIN `compra` compra ON tempcompra.`codigo_compra` = compra.`codigo`
+WHERE
+     compra.`codigo` = $P{codigo}]]>
+	</queryString>
+	<field name="compra_codigo" class="java.lang.Integer"/>
+	<field name="compra_usuario_cedula" class="java.lang.Integer"/>
+	<field name="compra_fecha" class="java.lang.String"/>
+	<field name="compra_valortotalbruto" class="java.lang.Integer"/>
+	<field name="compra_pago" class="java.lang.String"/>
+	<field name="tempcompra_codigo" class="java.lang.Integer"/>
+	<field name="tempcompra_codigo_compra" class="java.lang.Integer"/>
+	<field name="tempcompra_producto_codigo" class="java.lang.Integer"/>
+	<field name="tempcompra_producto_nombre" class="java.lang.String"/>
+	<field name="tempcompra_precio" class="java.lang.Integer"/>
+	<field name="tempcompra_cantidad" class="java.lang.Integer"/>
+	<field name="tempcompra_usuario_cedula" class="java.lang.Integer"/>
+	<field name="tempcompra_fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="206" splitType="Stretch">
+			<frame>
+				<reportElement uuid="184aff49-9308-405c-9adf-88627d92c200" mode="Opaque" x="0" y="5" width="451" height="95" forecolor="#0099FF" backcolor="#FFFFFF"/>
+				<staticText>
+					<reportElement uuid="e665b726-2a6b-4298-964c-34d4aaede895" style="SubTitle" mode="Transparent" x="3" y="35" width="233" height="26" forecolor="#000000"/>
+					<textElement markup="styled">
+						<font size="16" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Una solución a tu medida]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="c446a7e3-a807-4511-9b06-fb1fbd3b585d" style="Column header" x="236" y="46" width="106" height="18" forecolor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Factura de venta]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="477242f9-8dee-4e5b-bfac-24ace76d3c67" style="Detail" positionType="Float" x="344" y="46" width="79" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tempcompra_codigo_compra}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="e665b726-2a6b-4298-964c-34d4aaede895" style="SubTitle" x="4" y="5" width="232" height="29" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<textElement>
+						<font size="22" isBold="false" isItalic="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<text><![CDATA[DAJA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="5bbc36ac-122d-44ac-a78a-e90d11a944b5" x="5" y="60" width="191" height="20"/>
+					<textElement/>
+					<text><![CDATA[Dirección Calle 65 N° 13 -10 Bogotá D.C]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="18959075-ffc5-47eb-a03b-9fc561a8ae9e" x="85" y="5" width="75" height="30"/>
+					<imageExpression><![CDATA["C:\\Users\\gladiz florez\\Documents\\NetBeansProjects\\daja2\\daja2\\daja2\\daja2\\web\\images\\logo.jpg"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="fa21ce1c-f1a9-4bc9-b1a0-ab38cc40d005" x="9" y="75" width="100" height="20"/>
+					<textElement/>
+					<text><![CDATA[Telefono : 7521577]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="9d083df9-7092-4178-9338-d61e1cbb56b6" mode="Opaque" x="0" y="100" width="451" height="32" forecolor="#000000" backcolor="#FFFFFF"/>
+				<staticText>
+					<reportElement uuid="e6fb1296-5656-46dd-81ec-8bf0d41e50cc" style="Column header" x="2" y="12" width="42" height="18" forecolor="#000000"/>
+					<textElement textAlignment="Left">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Fecha]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="5d0dce00-906c-4864-affc-3eab28262d26" style="Detail" positionType="Float" x="47" y="12" width="67" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{compra_fecha}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement uuid="21f44068-7641-4179-bf88-4181f04bf821" style="Column header" x="7" y="139" width="37" height="18" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+				<textElement textAlignment="Left">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[C.c]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="f19be580-f66b-46ca-b1c2-c8c85ba0fb5a" style="Detail" positionType="Float" x="44" y="140" width="65" height="18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tempcompra_usuario_cedula}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1749e1e4-68f5-430b-8a6d-7a01d19276de" x="-2" y="158" width="111" height="20"/>
+				<textElement/>
+				<text><![CDATA[Ciudad : Bogota]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="94485515-7581-407d-8e2c-56e18f59d263" style="Column header" x="206" y="7" width="79" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cab7fe36-1662-4c0b-a833-5ce016c700b0" style="Column header" x="4" y="7" width="94" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Referencia producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="68fc6ce9-1456-43db-91f0-a317e732ac67" style="Column header" x="298" y="8" width="79" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Valor Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2cec7702-96d4-4ded-b3e1-4a7941ec24ca" style="Column header" x="108" y="5" width="79" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nombre Producto]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="7176558b-1e2f-4210-a97d-58991645961e" style="Detail" positionType="Float" x="378" y="8" width="79" height="18"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compra_valortotalbruto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="1bbb6a15-7956-4db8-989a-516541833801" style="Row" mode="Opaque" x="0" y="0" width="555" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="605b9a96-bfed-45f1-b56c-fa64a46375fb" style="Detail" positionType="Float" x="208" y="0" width="79" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tempcompra_cantidad}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="5982330a-3fdb-42bc-b5e5-585c5ec510ce" style="Detail" positionType="Float" x="7" y="0" width="91" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tempcompra_producto_codigo}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="8db1f82a-c678-4268-9c9e-18f74137bd06" style="Detail" positionType="Float" x="109" y="0" width="79" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tempcompra_producto_nombre}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch">
+			<line>
+				<reportElement uuid="c6d57459-0e9a-45ae-b744-fc083e13d247" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="6752c51e-0f25-4d2f-95ca-47a0eb9dfa0e" mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#FFFFFF"/>
+				<staticText>
+					<reportElement uuid="d05b791a-58da-4c52-a991-ec6f411ca665" x="98" y="1" width="300" height="20"/>
+					<textElement/>
+					<text><![CDATA[Esta factura es una impresión  de un comprobante digital fiscal]]></text>
+				</staticText>
+			</frame>
+			<line>
+				<reportElement uuid="b3be2c58-7067-4988-9b7e-ebc7cd242664" x="81" y="0" width="100" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="acdbff7a-4678-4861-9800-a80174a3010f" x="8" y="0" width="100" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
