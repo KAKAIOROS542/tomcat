@@ -33,8 +33,7 @@
                 <div class="social-icons">
                     <span>Encuéntranos en:</span>
                     
-                    <a href="https://www.facebook.com/SOFTWARDAJA?ref=hl" class="icon-2"></a>
-                   <a href="https://plus.google.com/u/0/getstarted?fww=1" class="icon-3"></a>
+                     <a href="https://www.facebook.com/profile.php?id=100023908057238" class="icon-2"></a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -46,25 +45,25 @@
           <div class="grid_12">
             <div class="wrap block-3 pad-2">
                 <div>
-                    <h3 class="p5">Daja es una empresa de desarollo de software constituida por estudiantes de ADSI del C.S.F la cual va dirigida para las pymes del sector de confecciones en pantalones la cual se encarga de proporcionar oportuna y eficientemente los servicios que requiera el cliente ademas de gestionar la entrada y salida del producto y las distintas actividades productivas de la empresa.</h3>
+                    <h3 class="p5">Tecinnova es una empresa especializada en tcnologia constituida sus socios en quilmes  la cual va dirigida para las pymes del sector de confecciones en pantalones la cual se encarga de proporcionar oportuna y eficientemente los servicios que requiera el cliente ademas de gestionar la entrada y salida del producto y las distintas actividades productivas de la empresa.</h3>
                     <h1>MISIÓN                  </h1>
-                  <p class="p5">Trabajar para ofrecer productos y servicios basados en sistemas de información brindando soluciones informáticas innovadoras para las pymes, ayudando a que sus negocios sean más eficientes, competitivos y rentables.</p>
+                  <p class="p5">Trabajar para ofrecer productos y servicios tecnologias moviles y mantenimiento brindando soluciones  innovadoras.</p>
                 </div>
                 <div>
                     <h1 class="p5"><span class="extra-wrap"> <span class="N">VISIÓN</span></span></h1>
                     <div class="box-1 p4">
                     
-                      <p class="p5">Constituirnos en una empresa líder en la ciudad de Bogota basandonos en el funcionamiento, en el profesionalismo y en la calidad de los servicios prestados.</p>
+                      <p class="p5">Constituirnos en una empresa líder en la ciudad de Buenos Aires  basandonos en el funcionamiento, en el profesionalismo y en la calidad de los servicios prestados.</p>
                       <h1 class="extra-wrap">OBJETIVO GENERAL</h1>
-                      <p class="p5"> cumplir y satisfacer las necesidades de los clientes agilizando y mejorando la eficiencia de su negocio por medio de soluciones informáticas necesitadas.</p>
+                      <p class="p5"> cumplir y satisfacer las necesidades de los clientes agilizando y mejorando la eficiencia de su negocio por medio de soporte a los equipos de smarphone importados.</p>
                       <p>&nbsp;</p>
                       <h1 class="extra-wrap">OBJETIVOS ESPECÍFICOS</h1>
-                      <p class="p5">Elaborar soluciones informáticas que cumplan con las necesidades de nuestros clientes.</p>
+                      <p class="p5">dar mantenimiento preventivo y correctivos que cumplan con las necesidades de nuestros clientes.</p>
                     </div>
                 </div>
               <div class="last">
                 <h3 class="p5">Identificar productos y servicios que satisfagan las necesidades y deseos de nuestros clientes.</h3>
-                <p class="p5">Lograr una óptima distribución del sistema de información ) y servicio a las pymes.</p>
+                <p class="p5">Lograr una óptima distribución de smartphones ) y servicio a las personas.</p>
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
               </div>

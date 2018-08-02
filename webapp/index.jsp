@@ -109,13 +109,13 @@
                         <li><a href="about.jsp"> Nosotros</a></li>
                         <li><a href="services.jsp">Productos</a></li>
                         <li><a href="contacts.jsp">Contáctenos</a></li>
-                        <li><a href="https://drive.google.com/file/d/0BwIo1nH9Mh0hMHBGUzVPel9xcjg/edit?usp=sharing">Plan de pruebas</a></li>
+                
                     </ul>
                     <div class="social-icons">
                         <span>Encuéntranos en:</span>
                         
-                        <a href="https://www.facebook.com/SOFTWARDAJA?ref=hl" class="icon-2"></a>
-                         <a href="https://plus.google.com/u/0/getstarted?fww=1" class="icon-3"></a>
+                        <a href="https://www.facebook.com/profile.php?id=100023908057238" class="icon-2"></a>
+                        
                         
                     </div>
                     <div class="clear"></div>
@@ -140,7 +140,7 @@
  <div class="datagrid"><table>
 <thead>
 <tr class="alt">
-<caption >ADSI </caption> 
+<caption >@Copyright Rocio Zarate Tec-innova quilmes argentina </caption> 
 <tr>
 <tr><td colspan="4"></td> <td> 
 
@@ -150,9 +150,7 @@
 </tr>
 </form>
 <tr>
-<th>Aprendices</th>
-<th>Roles</th>
-<th>Instructor</th>
+
 
 
 
@@ -160,18 +158,13 @@
 </tr></thead>
 <tbody>
 <tr class="alt">
-<td>Tania Patricia Ordoñez</td>
-<td>Administrador</td>
-<td>Jose Luis Sarta</td>
 <tr></tr>
-<td>Miguel Ángel Pineda</td>
-<td>Empleado</td>
+
 <td></td>
 <tr></tr>
-<td>Oswald Andres Saiz</td>
-<td>Cliente</td>
+
 <tr></tr>
-<td>Ficha 397354</td>
+
 <td></td>
 <td></td>
 

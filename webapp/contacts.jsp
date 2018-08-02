@@ -35,8 +35,8 @@
                 </ul>
                 <div class="social-icons">
                     <span>Encuéntranos en:</span>
-                    <a href="https://www.facebook.com/SOFTWARDAJA?ref=hl" class="icon-2"></a>
-                    <a href="https://plus.google.com/u/0/getstarted?fww=1" class="icon-3"></a>
+           <a href="https://www.facebook.com/profile.php?id=100023908057238" class="icon-2"></a>
+                 
                 </div>
                 <div class="clear"></div>
             </div>
