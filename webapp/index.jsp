@@ -183,14 +183,14 @@
                 </div>
             </div>
             <p>&nbsp;</p>
-            <div id="login2"><a href="https://drive.google.com/file/d/0B459DMPZaCluMDFsV2tTdEZQeUk/edit?usp=sharing"><img src="images/formato.jpg" width="145" height="35" alt="login"></a></div>
+           
             <p>&nbsp;</p>
             <div class="aside"></div>  
         
   </div>
 </div>
 
-<!--==============================footer=================================-->C
+<!--==============================footer=================================-->
 </body>
 </html>
 </body>
