@@ -24,7 +24,7 @@
         
         Connection conn = Conectar.getInstace();
         
-       File ReportFile = new File (application.getRealPath("/tmp/Reportes/reportecomp.jasper"));
+       File ReportFile = new File (application.getRealPath("/Reportes/reportecomp.jasper"));
        Map parameters= new HashMap ();
        byte [] bytes = JasperRunManager.runReportToPdf(ReportFile.getPath(),parameters,conn);
    response.setHeader("Content-Disposition", "attachment; filename=\"reporte.pdf\";");
