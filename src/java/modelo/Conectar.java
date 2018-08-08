@@ -21,7 +21,7 @@ public class Conectar {
     private static void conectar() {
         try {
             Class.forName("com.mysql.jdbc.Driver"); 
-            cnn = DriverManager.getConnection("jdbc:mysql://172.30.131.58:3306/concesionario", "asdf", "asdf"); 
+            cnn = DriverManager.getConnection("jdbc:mysql://172.30.131.58:3306/concesionario?autoReconnect=true", "asdf", "asdf"); 
         } catch (SQLException e) {  
           System.out.println("Error de MySQL: " + e.getMessage()); 
         }  catch (Exception e) {
